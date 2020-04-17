@@ -5,7 +5,7 @@ You are a famous entrepreneur of enterprice
 
 
 <p align="center">
-  <img src="Images/CSP.png" width="450" title="hover text">
+  <img src="Images/CSP.png" width="350" title="hover text">
 </p>
 
 You have 5 people available to be the chief of each workstation (no one can be the chief of two or more stations). However, they can be extremely arrogant with some of each other. You, as president of enterprice, want to guarantee harmonious relationships between consecutive workstations. The head of human resources have brought you the following chart that shows the level of compatibility between your personal:
