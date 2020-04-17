@@ -1,38 +1,120 @@
-# Simple Fuzzy System
+# Constraint Satisfaction Problems
 
-El programa se encarga de evaluar un sistema de decisión difusa para la compra de autos basado en dos entradas (precio, kilometraje), un conjunto de reglas y una salida que determina la compra o no-compra del vehículo. 
-Entradas: El sistema tiene dos entradas definidas así: 
-
-Precio: Esta entrada tiene un universo de discurso entre 0 y 100 Millones de pesos. 
-1. Conjuntos difusos de la entrada:  
-    -Barato: Trapezoidal (0, 0, 30, 70)  
-    -Estándar: Triangular (25, 60, 85)  
-    -Costoso: Trapezoidal (55, 80, 100, 100) 
-
-Kilometraje: Esta entrada tiene un universo de discurso entre 0 y 300 Mil Kilómetros 
-1. Conjuntos difusos de la entrada:  
-    -Bajo: Trapezoidal (0, 0, 50, 200)  
-    -Medio: Trapezoidal (50, 100, 200, 300)  
-    -Alto: Triangular (200, 300, 300) 
-
-Salida: La salida tiene un Universo de discurso entre 0 y 1 y dos conjuntos de salida así: 
-    -Comprar: Trapezoidal (0, 0, 0.3, 0.8) 
-    -No-Comprar: Triangular (0.5, 1, 1) 
-    
-Base de reglas: Las dos entradas y la salida se encuentran relacionadas mediante 9 reglas definidas en la siguiente matriz de reglas. 
+You are a famous entrepreneur of enterprice
+. You are opening a new dependency, which requires the development of a supply chain. You have deﬁned ﬁve workstations, which needs the good/service from the previous one. The workstations are: farming, design, manufacturing, packaging, and transportation.: 
 
 
 <p align="center">
   <img src="Images/Table.png" width="650" title="hover text">
 </p>
 
-Entradas y Salidas del sistema difuso.
+You have 5 people available to be the chief of each workstation (no one can be the chief of two or more stations). However, they can be extremely arrogant with some of each other. You, as president of enterprice, want to guarantee harmonious relationships between consecutive workstations. The head of human resources have brought you the following chart that shows the level of compatibility between your personal:
+
 
 <p align="center">
-  <img src="Images/Input.png" width="650" title="hover text">
+  <img src="Images/CSP.png" width="650" title="hover text">
 </p>
 
-<p align="center">
-  <img src="Images/Ouput.png" width="375" title="hover text">
-</p>
 
+Result
+==========================
+
+SCRIPT =========================================================================
+csp2 (ver. Unknown)
+Andrea Rey, Jose Lopez
+
+This is a report lab CSP
+================================================================================
+
+START ALGORITM ..... ASSIGNAMENT AREAS =========================================
+                                                      Tuesday 09/04/18, 20:25:32
+================================================================================
+
+BACKTRACK : 1 __________________________________________________________________
+
+.
+
+
+CSP with assignment:{'Farming': 'Mike'}
+
+Farming-> Mike, 
+
+Desing-> Emily, Tom, 
+
+Manufacturing-> Mike, James, Emily, Tom, Amy, 
+
+Packing-> Mike, James, Emily, Tom, Amy, 
+
+Trasportation-> Emily, Tom, 
+
+BACKTRACK : 2 __________________________________________________________________
+
+.
+
+
+CSP with assignment:{'Farming': 'Mike', 'Desing': 'Emily'}
+
+Farming-> Mike, 
+
+Desing-> Emily, 
+
+Manufacturing-> James, 
+
+Packing-> Mike, James, Emily, Tom, Amy, 
+
+Trasportation-> Tom, 
+
+BACKTRACK : 3 __________________________________________________________________
+
+.
+
+
+CSP with assignment:{'Farming': 'Mike', 'Desing': 'Emily', 'Manufacturing': 'James'}
+
+Farming-> Mike, 
+
+Desing-> Emily, 
+
+Manufacturing-> James, 
+
+Packing-> Amy, 
+
+Trasportation-> Tom, 
+
+BACKTRACK : 4 __________________________________________________________________
+
+.
+
+
+CSP with assignment:{'Farming': 'Mike', 'Desing': 'Emily', 'Manufacturing': 'James', 'Packing': 'Amy'}
+
+Farming-> Mike, 
+
+Desing-> Emily, 
+
+Manufacturing-> James, 
+
+Packing-> Amy, 
+
+Trasportation-> Tom, 
+
+BACKTRACK : 5 __________________________________________________________________
+
+.
+
+
+CSP with assignment:{'Farming': 'Mike', 'Desing': 'Emily', 'Manufacturing': 'James', 'Packing': 'Amy', 'Trasportation': 'Tom'}
+
+Farming-> Mike, 
+
+Desing-> Emily, 
+
+Manufacturing-> James, 
+
+Packing-> Amy, 
+
+Trasportation-> Tom, 
+
+END TIME =======================================================================
+                                                      Tuesday 09/04/18, 20:25:32
+================================================================================
